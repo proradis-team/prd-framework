@@ -1,0 +1,36 @@
+@import '../_vars';
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 16px 0;
+	padding:0;
+}
+
+h1 {
+	font-size: 28rem * $units;
+	line-height: 28rem * $units;
+}
+
+h2 {
+	font-size: 24rem * $units;
+	line-height: 24rem * $units;
+}
+
+h3 {
+	font-size: 20rem * $units;
+	line-height: 20rem * $units;
+}
+
+h4 {
+	font-size: 18rem * $units;
+	line-height: 18rem * $units;
+}
+
+h5 {
+	font-size: 16rem * $units;
+	line-height: 16rem * $units;
+}
+
+h6 {
+	font-size: 14rem * $units;
+	line-height: 14rem * $units;
+}

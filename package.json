@@ -1,0 +1,37 @@
+{
+  "name": "prd-framework",
+  "version": "1.0.0",
+  "description": "CSS Framework",
+  "main": "index.js",
+  "scripts": {
+		"watch:css:minify": "node-sass src/main.scss dist/prd-framework.min.css  --source-map true --output-style compressed -rw src/**/*",
+		"watch:docs:minify": "node-sass src/docs.scss docs/assets/docs.min.css  --source-map true --output-style compressed -rw src/**/*",
+    "watch:css": "node-sass src/main.scss dist/prd-framework.css -rw src",
+    "build:css:minify": "node-sass src/main.scss dist/prd-framework.min.css  --source-map true --output-style compressed",
+		"build:css": "node-sass src/main.scss dist/prd-framework.css",
+		"build:docs:minify": "node-sass src/docs.scss docs/assets/docs.min.css  --source-map true --output-style compressed",
+    "build": "npm run build:css && npm run build:css:minify && npm run build:docs:minify",
+    "dev": "concurrently \"npm run watch:css:minify\" \"npm run watch:css\" \"npm run watch:docs:minify\" \"browser-sync start --config 'config/browsersync.js'\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/proradis-team/prd-framework.git"
+  },
+  "keywords": [
+    "CSS",
+    "Framework",
+    "PRORADIS"
+  ],
+  "author": "Diego Vieira",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/proradis-team/prd-framework/issues"
+  },
+  "homepage": "https://github.com/proradis-team/prd-framework#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "concurrently": "^4.1.0",
+    "lite-server": "^2.4.0",
+    "node-sass": "^4.11.0"
+  }
+}
