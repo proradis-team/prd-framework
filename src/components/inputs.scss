@@ -1,0 +1,71 @@
+@import '../vars';
+
+.input {
+	display: flex;
+	position: relative;
+	align-items: center;
+	align-content: center;
+	margin: $gap;
+
+	input[type="radio"] {
+    // hide the real radio button
+    @extend .__invisible;
+    
+    & + label {
+      padding: 5px;
+      padding-left: 28px;
+      cursor: pointer;
+			display: flex;
+			align-items: center;
+			align-content: center;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+				left: 0;
+				bottom: 0;
+				margin: auto;
+				width: 22px;
+				height: 22px;
+				border-radius: 50%;
+        border: 1px solid #999;
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+				left: 4px;
+				bottom: 0;
+				margin: auto;
+				width: 14px;
+				height: 14px;
+				border-radius: 50%;
+        background: none;
+      }
+    }
+    
+    &:active,
+    &:focus {
+      outline: 1px dashed fade($secondary, 60%)
+    }
+    
+    // selected
+    &:checked + label {
+      &:after {
+        content: "";
+        background: $secondary;
+        transition: all 75ms ease-in;
+      }
+    }
+    
+  } 
+}
+
+.__invisible {
+	position: absolute;
+    left: -9999px;
+    z-index: -9999;
+    visibility: hidden;
+}
