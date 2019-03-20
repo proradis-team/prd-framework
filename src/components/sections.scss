@@ -1,0 +1,21 @@
+@import '../_vars';
+
+section {
+	display: block;
+	border-radius: $radius;
+	border: 1px solid $light;
+	margin: $gap 0;
+	background: #fff;
+
+	&:before {
+		color: $textheader;
+		content: attr(aria-label);
+		padding: $gap;
+		display:block;
+		font-size: 18rem * $units;
+	}
+
+	.section-container {
+		padding: $gap;
+	}
+}

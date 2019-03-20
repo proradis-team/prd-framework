@@ -109,6 +109,12 @@ li input[type='checkbox'] {
 	vertical-align: middle;
 }
 
+p {
+	margin: 1.2em 0;
+}
+
+
+
 .app-nav {
 	margin: 25px 60px 0 0;
 	position: absolute;
@@ -119,10 +125,6 @@ li input[type='checkbox'] {
 	/* navbar dropdown */
 	&.no-badge {
 		margin-right: 25px;
-	}
-
-	p {
-		margin: 0;
 	}
 
 	>a {
@@ -266,6 +268,8 @@ main {
 		line-height: 2em;
 		padding-bottom: 40px;
 		padding-right: 8px;
+		padding-left: 8px;
+		font-weight: 500;
 
 		ul {
 			margin:0;
@@ -273,25 +277,26 @@ main {
 
 			li {
 				background: none;
-				border-radius: 0 32px 32px 0;
+				border-radius: 4px;
 
 				a {
 					color: $primary;
-					border-radius: 0 32px 32px 0;
 					text-decoration: none;
 					padding-left:8px;
+					padding: 4px;
 
 					&:hover {
 						background: rgba($light, 0.5);
+						border-radius: 4px;
 					}
 				}
 
 				&.active {
-					background: $light;
+					background: $secondary;
 
 					a {
+						color: #fff;
 						font-weight: bold;
-						border-radius: 0 32px 32px 0;
 					}
 				}
 			}
@@ -403,6 +408,8 @@ body.sticky {
 }
 
 .content {
+	margin:0;
+	border:none;
 	padding-top: 60px;
 	position: absolute;
 	top: 0;
@@ -411,6 +418,16 @@ body.sticky {
 	left: 0px;
 	-webkit-transition: left 250ms ease;
 	transition: left 250ms ease;
+
+	a {
+		color: $primary;
+	}
+
+	h2 {
+    margin: 45px 0 0.8em;
+    padding-bottom: 0.7em;
+    border-bottom: 1px solid $light;
+	}
 }
 
 .markdown-section {
@@ -431,34 +448,39 @@ body.sticky {
 	}
 
 	iframe {
-		border: 1px solid #eee;
+		border: 1px solid $light;
 	}
 
 	table {
 		border-collapse: collapse;
 		border-spacing: 0;
-		display: block;
-		margin-bottom: 1rem;
+		margin-bottom: 16px;
 		overflow: auto;
 		width: 100%;
-	}
+		border-radius: 4px;
 
-	th {
-		border: 1px solid #ddd;
-		font-weight: bold;
-		padding: 6px 13px;
-	}
+		th {
+			font-weight: bold;
+			padding: 8px 16px;
+		}
+	
+		td {
+			border: 1px solid $light;
+			padding: 8px 16px;
 
-	td {
-		border: 1px solid #ddd;
-		padding: 6px 13px;
-	}
-
-	tr {
-		border-top: 1px solid #ccc;
-
-		&:nth-child(2n) {
-			background-color: #f8f8f8;
+			> code {
+				background: #333;
+				color: $tertiary;
+				padding: 4px 8px;
+				font-size: 14px;
+				border-radius: 4px;
+			}
+		}
+	
+		tr {
+			&:nth-child(2n) {
+				background-color: $light;
+			}
 		}
 	}
 
@@ -769,6 +791,122 @@ section.cover {
 
 		&:hover {
 			color: var(--theme-color, #000);
+		}
+	}
+}
+
+.markdown-section {
+	pre code .hljs-tag pre code .hljs-value, pre code .hljs-comment, pre code .hljs-java pre code .hljs-annotation, pre code .hljs-python pre code .hljs-decorator, pre code .hljs-template_comment, pre code .hljs-pi, pre code .hljs-doctype, pre code .hljs-deletion, pre code .hljs-shebang, pre code .hljs-apache pre code .hljs-sqbracket, pre code .hljs-tex pre code .hljs-formula {
+		color: #b3b3b3;
+	}
+
+	pre code .hljs-symbol, pre code .hljs-symbol pre code .hljs-string, pre code .hljs-value, pre code .hljs-regexp, pre code .hljs-string, pre code .hljs-subst, pre code .hljs-haskell pre code .hljs-type, pre code .hljs-preprocessor, pre code .hljs-ruby pre code .hljs-class pre code .hljs-parent, pre code .hljs-built_in, pre code .hljs-sql pre code .hljs-aggregate, pre code .hljs-django pre code .hljs-template_tag, pre code .hljs-django pre code .hljs-variable, pre code .hljs-smalltalk pre code .hljs-class, pre code .hljs-javadoc, pre code .hljs-django pre code .hljs-filter pre code .hljs-argument, pre code .hljs-smalltalk pre code .hljs-localvars, pre code .hljs-smalltalk pre code .hljs-array, pre code .hljs-attr_selector, pre code .hljs-pseudo, pre code .hljs-addition, pre code .hljs-stream, pre code .hljs-envvar, pre code .hljs-apache pre code .hljs-tag, pre code .hljs-apache pre code .hljs-cbracket, pre code .hljs-tex pre code .hljs-command, pre code .hljs-prompt {
+		color: #42b983;
+	}
+
+	pre {
+		border-radius: 4px;
+		-webkit-font-smoothing: initial;
+		line-height: 1.5rem;
+		margin: 1.2em 0;
+		overflow: auto;
+		position: relative;
+		word-wrap: normal;
+
+		& >code {
+			-moz-osx-font-smoothing: initial;
+			-webkit-font-smoothing: initial;
+			background: #333;
+			border-radius: 2px;
+			color: #f1f5f9;
+			display: block;
+			font-family: Roboto Mono,Monaco,courier,monospace;
+			font-size: .8rem;
+			line-height: inherit;
+			max-width: inherit;
+			overflow: inherit;
+			padding: 8px 16px;
+			white-space: inherit;
+		}
+		
+
+		&:after {
+			color: #fff;
+			content: attr(data-lang);
+			font-size: 12rem * $units;
+			text-transform: uppercase;
+			height: 15px;
+			line-height: 15px;
+			padding: 5px 10px 0;
+			position: absolute;
+			right: 8px;
+			text-align: right;
+			top: 8px;
+		}
+	}
+
+	.token.tag {
+		color: $tertiary;
+	}
+}
+
+// code {
+// 	-moz-osx-font-smoothing: initial;
+// 	-webkit-font-smoothing: initial;
+// 	background: #333;
+// 	border-radius: 2px;
+// 	color: #f1f5f9;
+// 	display: inline-block;
+// 	font-family: Roboto Mono,Monaco,courier,monospace;
+// 	font-size: .8rem;
+// 	line-height: inherit;
+// 	max-width: inherit;
+// 	overflow: inherit;
+// 	padding: 8px 16px;
+// 	white-space: inherit;
+// }
+
+code {
+	color: $tertiary;
+	padding: 3px 5px;
+	margin: 0 2px;
+	border-radius: 2px;
+	white-space: nowrap;
+	background: #313131;
+}
+
+.demo-block {
+	.source {
+		// background: #f1f5f9;
+	}
+}
+
+.placeholder {
+	background: $light;
+	border-radius: 4px;
+	display:block;
+
+	&.box {
+		@for $i from 1 through 4 {
+			$value : #{$i * 5};
+		
+			&.s-#{$value} {
+				height: #{$value + 'px'};
+				width: #{$value  + 'px'};
+			}
+		}
+	}
+
+	&.rect {
+		margin-bottom: 8px;
+
+		@for $i from 1 through 10 {
+			$value : #{$i * 24};
+		
+			&.s-#{$value} {
+				height: 16px;
+				width: #{$value  + 'px'};
+			}
 		}
 	}
 }

@@ -40,7 +40,9 @@
 </style>
 ```
 
-### Usage
+## Alignment and Decorations
+
+
 ```html
 /*vue*/
 <template>

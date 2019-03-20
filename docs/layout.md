@@ -15,10 +15,10 @@ There's two options available to apply the orientation
 
 |   |   |
 |---|---|
-| ```.flex-row``` | Apply the horizontal orientation |
-| ```.flex-column``` | Apply the verticaly orientation |
+| ```.flex-row``` | Apply horizontal orientation |
+| ```.flex-column``` | Apply verticaly orientation |
 
-### Horizontal Orientation
+## Horizontal Orientation
 
 ```html
 /*vue*/
@@ -38,13 +38,13 @@ There's two options available to apply the orientation
 .box-item {
 	width: 64px;
 	height: 64px;
-	background: #f1f5f9;
+	background: #313131;
 	margin: 8px;
 }
 </style>
 ```
 
-### Vertical Orientation
+## Vertical Orientation
 
 ```html
 /*vue*/
@@ -64,19 +64,19 @@ There's two options available to apply the orientation
 .box-item {
 	width: 64px;
 	height: 64px;
-	background: #f1f5f9;
+	background: #313131;
 	margin: 8px;
 }
 </style>
 ```
 
-### Child Alignment
+## Child Alignment
 
 ```html
 /*vue*/
 <template>
 	<div>
-		<div class="d-flex" style="height: 256px; border:1px solid #f1f5f9" :class="[orientation, horizontalAlign, verticalAlign]">
+		<div class="d-flex" style="height: 256px; border:1px solid #313131" :class="[orientation, horizontalAlign, verticalAlign]">
 			<div class="box-item"></div>
 			<div class="box-item"></div>
 			<div class="box-item"></div>
@@ -128,14 +128,14 @@ There's two options available to apply the orientation
 
 <style>
 .box-item {
-	background: #f1f5f9;
+	background: #313131;
 	margin: 8px;
 	padding:8px;
 }
 </style>
 ```
 
-### Child Options
+## Child Options
 
 ```html
 /*vue*/
@@ -173,13 +173,13 @@ There's two options available to apply the orientation
 .box-item {
 	width: 64px;
 	height: 64px;
-	background: #f1f5f9;
+	background: #313131;
 	margin: 8px;
 }
 </style>
 ```
 
-### Examples Usage
+## Examples
 
 ```html
 /*vue*/
@@ -226,7 +226,7 @@ There's two options available to apply the orientation
 #demo-examples .box-item {
 	width: 64px;
 	height: 64px;
-	background: #f1f5f9;
+	background: #313131;
 	margin: 8px;
 }
 

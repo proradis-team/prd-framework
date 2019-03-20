@@ -1,0 +1,47 @@
+@import '../_vars';
+
+nav {
+	margin: $gap;
+	position: relative;
+
+	&.side-nav {
+		display: block;
+		flex: 1;
+
+		&.sticky {
+			position: sticky;
+			top:0;
+		}
+
+		a, button {
+			text-decoration: none;
+			display: block;
+			padding: $gap $gap * 2;
+			transition: $units;
+			border-radius: $radius;
+
+			&:hover {
+				background: $light;
+			}
+
+			&.active {
+				color: #fff;
+				background: $secondary;
+			}
+		}
+
+		ul {
+			li {
+				display: block;
+			}
+		}
+	}
+	
+	ul {
+		margin: 0; padding: 0;
+
+		li {
+			list-style: none;
+		}
+	}
+}

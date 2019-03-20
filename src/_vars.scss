@@ -2,8 +2,14 @@ $units: 0.0625;
 
 /* Colors */
 $light: #f1f5f9;
+$textheader: #616161;
 $primary: #0a2644;
 $secondary: #02dbff;
 $tertiary: #75ff02;
+$dangerColor: #FF1744;
+$warningColor: #fbc02d;
 
 $gap: 8px;
+$radius: 4px;
+
+$default-animation: all 120ms cubic-bezier(0.17, 0.67, 0.76, 1);

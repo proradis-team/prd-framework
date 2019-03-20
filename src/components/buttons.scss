@@ -1,0 +1,123 @@
+@import '../vars';
+
+.btn {
+	background: $light;
+	padding: $gap $gap * 2;
+	margin: $gap;
+	font-size: 14.5rem * $units;
+	line-height: 14.5rem * $units;
+	font-weight: 500;
+	border-radius: $radius;
+	border: none;
+	cursor: pointer;
+	user-select: none;
+	white-space: nowrap;
+	letter-spacing: .01785714em;
+	height: 36px;
+	transition: $default-animation;
+	outline: none;
+	transform: perspective(1px) scale(1) translate3d(0,0,0);
+	backface-visibility: hidden;
+	-webkit-font-smoothing: antialiased;
+
+	&:hover {
+		transform: perspective(1px) scale(1.05) translate3d(0,0,0);
+	}
+
+	&:active {
+		transform: perspective(1px) scale(1) translate3d(0,0,0);
+	}
+
+	&-primary {
+		color: #fff;
+		background: $primary;
+
+		&.text, &.btn-icon {
+			color: $primary;
+			
+			&:hover {
+				background: rgba($primary, 0.15) !important;
+			}
+		}
+	}
+
+	&-secondary {
+		color: #fff;
+		background: $secondary;
+
+		&.text, &.btn-icon {
+			color: $secondary;
+
+			&:hover {
+				background: rgba($secondary, 0.15) !important;
+			}
+		}
+	}
+
+	&-tertiary {
+		color: #313131;
+		background: $tertiary;
+
+		&.text, &.btn-icon {
+			color: $tertiary;
+
+			&:hover {
+				background: rgba($tertiary, 0.15) !important;
+			}
+		}
+	}
+
+	&-danger {
+		color: #fff;
+		background: $dangerColor;
+
+		&.text, &.btn-icon {
+			color: $dangerColor;
+
+			&:hover {
+				background: rgba($dangerColor, 0.15) !important;
+			}
+		}
+	}
+
+	&-warning {
+		color: #313131;
+		background: $warningColor;
+
+		&.text, &.btn-icon {
+			color: $warningColor;
+
+			&:hover {
+				background: rgba($warningColor, 0.05) !important;
+			}
+		}
+	}
+
+	&.text {
+		background: none;
+	}
+
+	&.btn-icon {
+		width: 36px;
+		height: 36px;
+		border-radius: $radius * 4;
+		display: inline-block;
+		padding: 0;
+		background: none;
+		
+		i {
+			font-size: 24rem * $units;
+			line-height: 24rem * $units;
+		}
+	}
+
+	&:disabled, &.btn-disabled {
+		opacity:0.5;
+		cursor: auto;
+		transform: scale(1) !important;
+
+		&:hover {
+			background: none;	
+		}
+	}
+}
