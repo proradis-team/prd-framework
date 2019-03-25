@@ -101,3 +101,41 @@ html, body {
 
 .flex-33 { flex: 1 1 100%;  max-width: 33.33%;  max-height: 100%; box-sizing: border-box; }
 .flex-66 { flex: 1 1 100%;  max-width: 66.66%;  max-height: 100%; box-sizing: border-box; }
+
+@mixin marginAndPaddingHelperGenerator {
+  @for $i from 1 through 4 {
+    .m-#{$i * 4}-t {
+      margin-top: $i * 4px;
+    }
+    .m-#{$i * 4}-l {
+      margin-left: $i * 4px;
+    }
+    .m-#{$i * 4}-r {
+      margin-right: $i * 4px;
+    }
+    .m-#{$i * 4}-b {
+      margin-bottom: $i * 4px;
+    }
+    .m-#{$i * 4} {
+      margin: $i * 4px;
+    }
+
+    .p-#{$i * 4}-t {
+      padding-top: $i * 4px;
+    }
+    .p-#{$i * 4}-l {
+      padding-left: $i * 4px;
+    }
+    .p-#{$i * 4}-r {
+      padding-right: $i * 4px;
+    }
+    .p-#{$i * 4}-b {
+      padding-bottom: $i * 4px;
+    }
+    .p-#{$i * 4} {
+      padding: $i * 4px;
+    }
+  }
+}
+
+@include marginAndPaddingHelperGenerator;
