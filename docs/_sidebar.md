@@ -5,6 +5,7 @@
 * [Guide](guide.md)
 * [Typography](typography.md)
 * [Buttons](buttons.md)
+* [Inputs](inputs.md)
 * [Cards](cards.md)
 * [Layout](layout.md)
 * [List](list.md)

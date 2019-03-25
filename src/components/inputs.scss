@@ -1,5 +1,17 @@
 @import '../vars';
 
+@mixin resetInput() {
+	display:block;
+	width:100%;
+	padding: $gap * 2;
+	border-radius: $gap * 4;
+	background: #fff;
+	outline: none;
+	transition: $default-animation;
+	font-size: 14px;
+	border: 1px solid #d1d5d9;
+}
+
 .input {
 	display: flex;
 	position: relative;
@@ -26,10 +38,10 @@
 				left: 0;
 				bottom: 0;
 				margin: auto;
-				width: 22px;
-				height: 22px;
+				width: 18px;
+				height: 18px;
 				border-radius: 50%;
-        border: 1px solid #999;
+        border: 1px solid #d1d5d9;
       }
 
       &:after {
@@ -39,12 +51,21 @@
 				left: 4px;
 				bottom: 0;
 				margin: auto;
-				width: 14px;
-				height: 14px;
+				width: 10px;
+				height: 10px;
 				border-radius: 50%;
-        background: none;
-      }
-    }
+				background: none;
+				opacity:0;
+				transform: scale(0);
+				transition: $default-animation;
+			}
+			
+			&:hover::after {
+				background:#c6c6c6 !important;
+				transform: scale(.5);
+				opacity:1;
+			}
+		}
     
     &:active,
     &:focus {
@@ -55,12 +76,38 @@
     &:checked + label {
       &:after {
         content: "";
-        background: $secondary;
-        transition: all 75ms ease-in;
+        background: $secondary !important;
+				transform: scale(1);
+				opacity:1;
       }
     }
     
-  } 
+	}
+	
+	/* Search input */
+	input[type='search'] {
+		@include resetInput;
+		
+		&:hover, &:focus &:active {
+			box-shadow: 0px 1px 6px 0px rgba(0,0,0,0.3);
+		}
+	}
+
+	input[type='text'],
+	input[type='email'],
+	input[type='number'],
+	input[type='phone'] {
+		@include resetInput;
+
+		background: #f1f3f4;
+		border-color: #f1f3f4;
+		border-radius: $radius;
+		padding: $gap;
+
+		&:focus:required:invalid {
+			border-color: $dangerColor;
+		}
+	}
 }
 
 .__invisible {

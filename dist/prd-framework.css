@@ -394,7 +394,8 @@ section {
   position: relative;
   align-items: center;
   align-content: center;
-  margin: 8px; }
+  margin: 8px;
+  /* Search input */ }
   .input input[type="radio"] + label {
     padding: 5px;
     padding-left: 28px;
@@ -409,10 +410,10 @@ section {
       left: 0;
       bottom: 0;
       margin: auto;
-      width: 22px;
-      height: 22px;
+      width: 18px;
+      height: 18px;
       border-radius: 50%;
-      border: 1px solid #999; }
+      border: 1px solid #d1d5d9; }
     .input input[type="radio"] + label:after {
       content: "";
       position: absolute;
@@ -420,16 +421,58 @@ section {
       left: 4px;
       bottom: 0;
       margin: auto;
-      width: 14px;
-      height: 14px;
+      width: 10px;
+      height: 10px;
       border-radius: 50%;
-      background: none; }
+      background: none;
+      opacity: 0;
+      transform: scale(0);
+      transition: all 120ms cubic-bezier(0.17, 0.67, 0.76, 1); }
+    .input input[type="radio"] + label:hover::after {
+      background: #c6c6c6 !important;
+      transform: scale(0.5);
+      opacity: 1; }
   .input input[type="radio"]:active, .input input[type="radio"]:focus {
     outline: 1px dashed fade(#02dbff, 60%); }
   .input input[type="radio"]:checked + label:after {
     content: "";
-    background: #02dbff;
-    transition: all 75ms ease-in; }
+    background: #02dbff !important;
+    transform: scale(1);
+    opacity: 1; }
+  .input input[type='search'] {
+    display: block;
+    width: 100%;
+    padding: 16px;
+    border-radius: 32px;
+    background: #fff;
+    outline: none;
+    transition: all 120ms cubic-bezier(0.17, 0.67, 0.76, 1);
+    font-size: 14px;
+    border: 1px solid #d1d5d9; }
+    .input input[type='search']:hover, .input input[type='search']:focus .input input[type='search']:active {
+      box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.3); }
+  .input input[type='text'],
+  .input input[type='email'],
+  .input input[type='number'],
+  .input input[type='phone'] {
+    display: block;
+    width: 100%;
+    padding: 16px;
+    border-radius: 32px;
+    background: #fff;
+    outline: none;
+    transition: all 120ms cubic-bezier(0.17, 0.67, 0.76, 1);
+    font-size: 14px;
+    border: 1px solid #d1d5d9;
+    background: #f1f3f4;
+    border-color: #f1f3f4;
+    border-radius: 4px;
+    padding: 8px; }
+    .input input[type='text']:focus:required:invalid,
+    .input input[type='email']:focus:required:invalid,
+    .input input[type='number']:focus:required:invalid,
+    .input input[type='phone']:focus:required:invalid {
+      border-color: #FF1744; }
 
 .__invisible, .input input[type="radio"] {
   position: absolute;
