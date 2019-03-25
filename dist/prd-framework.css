@@ -454,6 +454,7 @@ section {
   .input input[type='text'],
   .input input[type='email'],
   .input input[type='number'],
+  .input input[type='password'],
   .input input[type='phone'] {
     display: block;
     width: 100%;
@@ -471,6 +472,7 @@ section {
     .input input[type='text']:focus:required:invalid,
     .input input[type='email']:focus:required:invalid,
     .input input[type='number']:focus:required:invalid,
+    .input input[type='password']:focus:required:invalid,
     .input input[type='phone']:focus:required:invalid {
       border-color: #FF1744; }
 
