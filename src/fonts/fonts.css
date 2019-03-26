@@ -1,0 +1,47 @@
+@font-face {
+		font-family: 'galano_grotesque';
+		src: url('rene_bieder_-_galano_grotesque-webfont.woff2') format('woff2'),
+				 url('rene_bieder_-_galano_grotesque-webfont.woff') format('woff');
+		font-weight: normal;
+		font-style: normal;
+}
+
+@font-face {
+		font-family: 'galano_grotesque';
+		src: url('rene_bieder_-_galano_grotesque_bold-webfont.woff2') format('woff2'),
+				 url('rene_bieder_-_galano_grotesque_bold-webfont.woff') format('woff');
+		font-weight: 700;
+		font-style: normal;
+}
+
+@font-face {
+		font-family: 'galano_grotesque';
+		src: url('rene_bieder_-_galano_grotesque_extralight-webfont.woff2') format('woff2'),
+				 url('rene_bieder_-_galano_grotesque_extralight-webfont.woff') format('woff');
+		font-weight: 100;
+		font-style: normal;
+}
+
+@font-face {
+		font-family: 'galano_grotesque';
+		src: url('rene_bieder_-_galano_grotesque_heavy-webfont.woff2') format('woff2'),
+				 url('rene_bieder_-_galano_grotesque_heavy-webfont.woff') format('woff');
+		font-weight: 800;
+		font-style: normal;
+}
+
+@font-face {
+		font-family: 'galano_grotesque';
+		src: url('rene_bieder_-_galano_grotesque_italic-webfont.woff2') format('woff2'),
+				 url('rene_bieder_-_galano_grotesque_italic-webfont.woff') format('woff');
+		font-weight: normal;
+		font-style: italic;
+}
+
+@font-face {
+		font-family: 'galano_grotesque';
+		src: url('rene_bieder_-_galano_grotesque_medium-webfont.woff2') format('woff2'),
+				 url('rene_bieder_-_galano_grotesque_medium-webfont.woff') format('woff');
+		font-weight: 500;
+		font-style: normal;
+}

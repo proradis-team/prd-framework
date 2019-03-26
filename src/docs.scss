@@ -415,7 +415,7 @@ body.sticky {
 	top: 0;
 	right: 0;
 	bottom: 0;
-	left: 0px;
+	left: 0;
 	-webkit-transition: left 250ms ease;
 	transition: left 250ms ease;
 
@@ -818,7 +818,7 @@ section.cover {
 			-webkit-font-smoothing: initial;
 			background: #333;
 			border-radius: 2px;
-			color: #f1f5f9;
+			color: #E1E5E9;
 			display: block;
 			font-family: Roboto Mono,Monaco,courier,monospace;
 			font-size: .8rem;
@@ -855,7 +855,7 @@ section.cover {
 // 	-webkit-font-smoothing: initial;
 // 	background: #333;
 // 	border-radius: 2px;
-// 	color: #f1f5f9;
+// 	color: #E1E5E9;
 // 	display: inline-block;
 // 	font-family: Roboto Mono,Monaco,courier,monospace;
 // 	font-size: .8rem;
@@ -877,7 +877,7 @@ code {
 
 .demo-block {
 	.source {
-		// background: #f1f5f9;
+		// background: #E1E5E9;
 	}
 }
 

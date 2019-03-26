@@ -1,3 +1,4 @@
+@import url(./fonts/fonts.css);
 /* Reset and Default values */
 html, body {
   padding: 0;
@@ -326,6 +327,10 @@ html, body {
   grid-gap: 8px; }
 
 /* Colors */
+body, input, button {
+  font-family: 'galano_grotesque' !important;
+  font-weight: 400; }
+
 h1, h2, h3, h4, h5, h6 {
   margin: 16px 0;
   padding: 0; }
@@ -371,7 +376,7 @@ nav {
       transition: 0.0625;
       border-radius: 4px; }
       nav.side-nav a:hover, nav.side-nav button:hover {
-        background: #f1f5f9; }
+        background: #E1E5E9; }
       nav.side-nav a.active, nav.side-nav button.active {
         color: #fff;
         background: #02dbff; }
@@ -403,22 +408,22 @@ nav {
 /* Colors */
 .card {
   border-radius: 4px;
-  border: 1px solid #f1f5f9;
+  border: 1px solid #E1E5E9;
   background: #fff;
   transition: all 120ms cubic-bezier(0.17, 0.67, 0.76, 1); }
   .card:hover {
-    box-shadow: 0 1px 2px 0 #f1f5f9, 0 1px 3px 1px #f1f5f9; }
+    box-shadow: 0 1px 2px 0 #E1E5E9, 0 1px 3px 1px #E1E5E9; }
   .card-container {
     padding: 8px; }
   .card-actions {
-    border: 1px solid #f1f5f9;
+    border: 1px solid #E1E5E9;
     padding: 8px; }
 
 /* Colors */
 section {
   display: block;
   border-radius: 4px;
-  border: 1px solid #f1f5f9;
+  border: 1px solid #E1E5E9;
   margin: 8px 0;
   background: #fff; }
   section:before {
@@ -432,7 +437,7 @@ section {
 
 /* Colors */
 .btn {
-  background: #f1f5f9;
+  background: #E1E5E9;
   padding: 8px 16px;
   margin: 8px;
   font-size: 0.90625rem;

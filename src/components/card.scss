@@ -7,7 +7,7 @@
 	transition: $default-animation;
 
 	&:hover {
-		box-shadow: 0 1px 2px 0 #f1f5f9, 0 1px 3px 1px #f1f5f9;
+		box-shadow: 0 1px 2px 0 #E1E5E9, 0 1px 3px 1px #E1E5E9;
 	}
 
 	&-container {
@@ -15,7 +15,7 @@
 	}
 
 	&-actions {
-		border:1px solid #f1f5f9;
+		border:1px solid #E1E5E9;
 		padding:8px;
 	}
 }
