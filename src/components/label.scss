@@ -1,0 +1,23 @@
+@import '../vars';
+
+.label {
+	display:inline-block;
+	padding: 8px;
+	font-size: 12px;
+	font-weight: 500;
+
+	&-danger {
+		background: $dangerColor;
+		color: #fff;
+	}
+
+	&-warning {
+		background: $warningColor;
+		color: #313131;
+	}
+
+	&-success {
+		background: $tertiary;
+		color: #313131;
+	}
+}

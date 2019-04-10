@@ -97,7 +97,8 @@
 	input[type='email'],
 	input[type='number'],
 	input[type='password'],
-	input[type='phone'] {
+	input[type='phone'],
+	input[type='tel'] {
 		@include resetInput;
 
 		background: #f1f3f4;

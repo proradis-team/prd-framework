@@ -580,7 +580,8 @@ section {
   .input input[type='email'],
   .input input[type='number'],
   .input input[type='password'],
-  .input input[type='phone'] {
+  .input input[type='phone'],
+  .input input[type='tel'] {
     display: block;
     width: 100%;
     padding: 16px;
@@ -598,7 +599,8 @@ section {
     .input input[type='email']:focus:required:invalid,
     .input input[type='number']:focus:required:invalid,
     .input input[type='password']:focus:required:invalid,
-    .input input[type='phone']:focus:required:invalid {
+    .input input[type='phone']:focus:required:invalid,
+    .input input[type='tel']:focus:required:invalid {
       border-color: #FF1744; }
 
 .__invisible, .input input[type="radio"] {
@@ -606,3 +608,44 @@ section {
   left: -9999px;
   z-index: -9999;
   visibility: hidden; }
+
+/* Colors */
+.label {
+  display: inline-block;
+  padding: 8px;
+  font-size: 12px;
+  font-weight: 500; }
+  .label-danger {
+    background: #FF1744;
+    color: #fff; }
+  .label-warning {
+    background: #fbc02d;
+    color: #313131; }
+  .label-success {
+    background: #75ff02;
+    color: #313131; }
+
+/* Colors */
+.alert {
+  padding: 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  display: block; }
+  .alert-danger {
+    color: #fff;
+    background: #FF1744; }
+    .alert-danger.text, .alert-danger.btn-icon {
+      color: #FF1744; }
+      .alert-danger.text:hover, .alert-danger.btn-icon:hover {
+        background: rgba(255, 23, 68, 0.15) !important; }
+  .alert-warning {
+    color: #313131;
+    background: #fbc02d; }
+    .alert-warning.text, .alert-warning.btn-icon {
+      color: #fbc02d; }
+      .alert-warning.text:hover, .alert-warning.btn-icon:hover {
+        background: rgba(251, 192, 45, 0.05) !important; }
+  .alert-success {
+    color: #313131;
+    background: #75ff02; }

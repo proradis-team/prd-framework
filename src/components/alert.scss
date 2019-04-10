@@ -1,0 +1,40 @@
+@import '../_vars';
+
+.alert {
+	padding:16px;
+	border-radius:8px;
+	font-size:14px;
+	font-weight: 500;
+	display: block;
+
+	&-danger {
+		color: #fff;
+		background: $dangerColor;
+
+		&.text, &.btn-icon {
+			color: $dangerColor;
+
+			&:hover {
+				background: rgba($dangerColor, 0.15) !important;
+			}
+		}
+	}
+
+	&-warning {
+		color: #313131;
+		background: $warningColor;
+
+		&.text, &.btn-icon {
+			color: $warningColor;
+
+			&:hover {
+				background: rgba($warningColor, 0.05) !important;
+			}
+		}
+	}
+
+	&-success {
+		color:#313131;
+		background: $tertiary;
+	}
+}
