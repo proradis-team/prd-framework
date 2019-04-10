@@ -18,7 +18,12 @@
 	position: relative;
 	align-items: center;
 	align-content: center;
-	margin: $gap;
+	margin: $gap 0px;
+
+	label {
+		font-weight: 600;
+		font-size: 14rem * $units;
+	}
 
 	input[type="radio"] {
     // hide the real radio button
@@ -100,6 +105,7 @@
 	input[type='password'],
 	input[type='phone'],
 	input[type='tel'] {
+
 		@include resetInput;
 
 		background: #f1f3f4;

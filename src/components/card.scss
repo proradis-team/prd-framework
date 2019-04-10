@@ -1,7 +1,7 @@
 @import '../vars';
 
 .card {
-	border-radius: 4px;
+	border-radius: $gap;
 	border:1px solid $light;
 	background:#fff;
 	transition: $default-animation;

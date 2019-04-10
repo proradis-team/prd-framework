@@ -111,10 +111,12 @@
 				</div>
 
 				<div class="input">
+					<label class="flex-20">Email</label>
 					<input type="email" placeholder="Enter a valid email" required>
 				</div>
 
 				<div class="input">
+					<label class="flex-20">Phone</label>
 					<input type="phone" placeholder="Enter your phone" required>
 				</div>
     </div>

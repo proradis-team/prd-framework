@@ -2,9 +2,9 @@
 
 .label {
 	display:inline-block;
-	padding: ($gap - 4) $gap;
-	font-size: 14rem * $units;
-	font-weight:500;
+	padding: $gap $gap + 2;
+	font-size: 12rem * $units;
+	font-weight:600;
 	border-radius: $gap * 2;
 
 	&-danger {
