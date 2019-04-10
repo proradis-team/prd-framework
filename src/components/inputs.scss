@@ -3,14 +3,13 @@
 @mixin resetInput() {
 	display:block;
 	width:100%;
-	padding: $gap * 2;
-	border-radius: $gap * 4;
 	background: #fff;
 	outline: none;
 	transition: $default-animation;
 	font-size: 14px;
-	border: 1px solid #d1d5d9;
+	border: none;
 	font-family: 'Open Sans', sans-serif;
+	z-index:15;
 }
 
 .input {
@@ -19,23 +18,73 @@
 	align-items: center;
 	align-content: center;
 	margin: $gap 0px;
+	padding: $gap ($gap * 2);
+	border-radius: $gap;
+	border: 2px solid #f1f4f4;
+	background:#fff;
 
 	label {
 		font-weight: 600;
-		font-size: 14rem * $units;
+		position: absolute;
+    left: $gap * 2;
+    top: $gap;
+    font-size: 12px;
+		font-weight: 600;
+		color:#919191;
+    pointer-events: none;
+		z-index: 10;
+	}
+	
+	/* Search input */
+	input[type='search'] {
+		@include resetInput;
+		
+		&:hover, &:focus &:active {
+			box-shadow: 0px 1px 6px 0px rgba(0,0,0,0.3);
+		}
 	}
 
+	input[type='text'],
+	input[type='email'],
+	input[type='number'],
+	input[type='password'],
+	input[type='phone'],
+	input[type='tel'] {
+
+		&:not(:placeholder-shown) {
+			margin-top:$gap * 2;
+		}
+
+
+		@include resetInput;
+
+		&:focus:required:invalid {
+			border-color: $dangerColor;
+		}
+	}
+}
+
+.__invisible {
+	position: absolute;
+    left: -9999px;
+    z-index: -9999;
+    visibility: hidden;
+}
+
+.input-radio {
 	input[type="radio"] {
     // hide the real radio button
     @extend .__invisible;
     
     & + label {
       padding: 5px;
-      padding-left: 28px;
+      padding-left: $gap * 3;
       cursor: pointer;
 			display: flex;
 			align-items: center;
 			align-content: center;
+			position:relative;
+			pointer-events: all;   
 
       &:before {
         content: "";
@@ -89,39 +138,4 @@
     }
     
 	}
-	
-	/* Search input */
-	input[type='search'] {
-		@include resetInput;
-		
-		&:hover, &:focus &:active {
-			box-shadow: 0px 1px 6px 0px rgba(0,0,0,0.3);
-		}
-	}
-
-	input[type='text'],
-	input[type='email'],
-	input[type='number'],
-	input[type='password'],
-	input[type='phone'],
-	input[type='tel'] {
-
-		@include resetInput;
-
-		background: #f1f3f4;
-		border-color: #f1f3f4;
-		border-radius: $radius;
-		padding: $gap;
-
-		&:focus:required:invalid {
-			border-color: $dangerColor;
-		}
-	}
-}
-
-.__invisible {
-	position: absolute;
-    left: -9999px;
-    z-index: -9999;
-    visibility: hidden;
 }
