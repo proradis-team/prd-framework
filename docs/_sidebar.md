@@ -12,3 +12,4 @@
 * [Sections](sections.md)
 * [Tables](tables.md)
 * [Helpers](helpers.md)
+* [Alerts & Labels](alerts-labels.md)

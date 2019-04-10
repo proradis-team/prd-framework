@@ -612,40 +612,39 @@ section {
 /* Colors */
 .label {
   display: inline-block;
-  padding: 8px;
-  font-size: 12px;
-  font-weight: 500; }
+  padding: 4px 8px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 16px; }
   .label-danger {
-    background: #FF1744;
+    background: rgba(255, 23, 68, 0.75);
     color: #fff; }
   .label-warning {
     background: #fbc02d;
     color: #313131; }
   .label-success {
-    background: #75ff02;
+    background: rgba(117, 255, 2, 0.65);
     color: #313131; }
+  .label-info {
+    color: #fff;
+    background: rgba(10, 38, 68, 0.45); }
 
 /* Colors */
 .alert {
   padding: 16px;
   border-radius: 8px;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 500;
   display: block; }
   .alert-danger {
     color: #fff;
-    background: #FF1744; }
-    .alert-danger.text, .alert-danger.btn-icon {
-      color: #FF1744; }
-      .alert-danger.text:hover, .alert-danger.btn-icon:hover {
-        background: rgba(255, 23, 68, 0.15) !important; }
+    background: rgba(255, 23, 68, 0.75); }
   .alert-warning {
     color: #313131;
-    background: #fbc02d; }
-    .alert-warning.text, .alert-warning.btn-icon {
-      color: #fbc02d; }
-      .alert-warning.text:hover, .alert-warning.btn-icon:hover {
-        background: rgba(251, 192, 45, 0.05) !important; }
+    background: rgba(251, 192, 45, 0.45); }
   .alert-success {
     color: #313131;
-    background: #75ff02; }
+    background: rgba(117, 255, 2, 0.65); }
+  .alert-info {
+    color: #fff;
+    background: rgba(10, 38, 68, 0.45); }

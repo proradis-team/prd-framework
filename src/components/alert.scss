@@ -1,40 +1,29 @@
 @import '../_vars';
 
 .alert {
-	padding:16px;
-	border-radius:8px;
-	font-size:14px;
+	padding: $gap * 2;
+	border-radius: $gap;
+	font-size: 14rem * $units;
 	font-weight: 500;
 	display: block;
 
 	&-danger {
 		color: #fff;
-		background: $dangerColor;
-
-		&.text, &.btn-icon {
-			color: $dangerColor;
-
-			&:hover {
-				background: rgba($dangerColor, 0.15) !important;
-			}
-		}
+		background: rgba($dangerColor, 0.75);
 	}
 
 	&-warning {
 		color: #313131;
-		background: $warningColor;
-
-		&.text, &.btn-icon {
-			color: $warningColor;
-
-			&:hover {
-				background: rgba($warningColor, 0.05) !important;
-			}
-		}
+		background: rgba($warningColor, 0.45);
 	}
 
 	&-success {
 		color:#313131;
-		background: $tertiary;
+		background: rgba($tertiary, 0.65);
+	}
+
+	&-info {
+		color: #fff;
+		background: rgba($primary, 0.45);
 	}
 }

@@ -13,6 +13,8 @@
 
 body:not(.ready) {
 	overflow: hidden;
+	font-family: 'galano_grotesque' !important;
+	font-weight: 400;
 
 	[data-cloak],
 	.app-nav,

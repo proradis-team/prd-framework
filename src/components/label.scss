@@ -2,12 +2,13 @@
 
 .label {
 	display:inline-block;
-	padding: 8px;
-	font-size: 12px;
-	font-weight: 500;
+	padding: ($gap - 4) $gap;
+	font-size: 14rem * $units;
+	font-weight:500;
+	border-radius: $gap * 2;
 
 	&-danger {
-		background: $dangerColor;
+		background: rgba($dangerColor, 0.75);
 		color: #fff;
 	}
 
@@ -17,7 +18,12 @@
 	}
 
 	&-success {
-		background: $tertiary;
+		background: rgba($tertiary, 0.65);
 		color: #313131;
+	}
+
+	&-info {
+		color: #fff;
+		background: rgba($primary, 0.45);
 	}
 }
