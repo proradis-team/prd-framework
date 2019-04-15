@@ -49,7 +49,8 @@
 	input[type='number'],
 	input[type='password'],
 	input[type='phone'],
-	input[type='tel'] {
+	input[type='tel'],
+	select {
 
 		&:not(:placeholder-shown) {
 			margin-top:$gap * 2;

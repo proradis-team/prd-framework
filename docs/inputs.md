@@ -119,6 +119,13 @@
 					<label class="flex-20">Phone</label>
 					<input type="phone" placeholder="Enter your phone" required>
 				</div>
+
+				<div class="input">
+					<label for="service">Selecione o Nível de Serviço (SLA)</label>
+					<select>
+						<option disabled selected>Selecione uma opção</option>
+					</select>
+				</div>
     </div>
 </template>
 
