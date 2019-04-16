@@ -50,6 +50,9 @@
 	input[type='password'],
 	input[type='phone'],
 	input[type='tel'],
+	input[type='file'],
+	input[type='files'],
+	textarea,
 	select {
 
 		&:not(:placeholder-shown) {

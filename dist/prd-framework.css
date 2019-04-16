@@ -554,6 +554,9 @@ section {
   .input input[type='password'],
   .input input[type='phone'],
   .input input[type='tel'],
+  .input input[type='file'],
+  .input input[type='files'],
+  .input textarea,
   .input select {
     display: block;
     width: 100%;
@@ -570,6 +573,9 @@ section {
     .input input[type='password']:not(:placeholder-shown),
     .input input[type='phone']:not(:placeholder-shown),
     .input input[type='tel']:not(:placeholder-shown),
+    .input input[type='file']:not(:placeholder-shown),
+    .input input[type='files']:not(:placeholder-shown),
+    .input textarea:not(:placeholder-shown),
     .input select:not(:placeholder-shown) {
       margin-top: 16px; }
     .input input[type='text']:focus:required:invalid,
@@ -578,6 +584,9 @@ section {
     .input input[type='password']:focus:required:invalid,
     .input input[type='phone']:focus:required:invalid,
     .input input[type='tel']:focus:required:invalid,
+    .input input[type='file']:focus:required:invalid,
+    .input input[type='files']:focus:required:invalid,
+    .input textarea:focus:required:invalid,
     .input select:focus:required:invalid {
       border-color: #FF1744; }
 

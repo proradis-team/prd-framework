@@ -126,6 +126,16 @@
 						<option disabled selected>Selecione uma opção</option>
 					</select>
 				</div>
+
+				<div class="input">
+					<label for="service">Selecione um arquivo</label>
+					<input type="file">
+				</div>
+
+				<div class="input">
+					<label for="service">Digite um texto</label>
+					<textarea></textarea>
+				</div>
     </div>
 </template>
 
