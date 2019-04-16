@@ -562,7 +562,7 @@ section {
   .input input[type='phone'],
   .input input[type='tel'],
   .input input[type='file'],
-  .input input[type='files'],
+  .input input[type='date'],
   .input textarea,
   .input select {
     display: block;
@@ -581,7 +581,7 @@ section {
     .input input[type='phone']:not(:placeholder-shown),
     .input input[type='tel']:not(:placeholder-shown),
     .input input[type='file']:not(:placeholder-shown),
-    .input input[type='files']:not(:placeholder-shown),
+    .input input[type='date']:not(:placeholder-shown),
     .input textarea:not(:placeholder-shown),
     .input select:not(:placeholder-shown) {
       margin-top: 16px; }
@@ -610,10 +610,10 @@ section {
     .input input[type='file']:-webkit-autofill:hover,
     .input input[type='file']:-webkit-autofill:focus,
     .input input[type='file']:-webkit-autofill:active,
-    .input input[type='files']:-webkit-autofill,
-    .input input[type='files']:-webkit-autofill:hover,
-    .input input[type='files']:-webkit-autofill:focus,
-    .input input[type='files']:-webkit-autofill:active,
+    .input input[type='date']:-webkit-autofill,
+    .input input[type='date']:-webkit-autofill:hover,
+    .input input[type='date']:-webkit-autofill:focus,
+    .input input[type='date']:-webkit-autofill:active,
     .input textarea:-webkit-autofill,
     .input textarea:-webkit-autofill:hover,
     .input textarea:-webkit-autofill:focus,
@@ -631,7 +631,7 @@ section {
     .input input[type='phone']:focus:required:invalid,
     .input input[type='tel']:focus:required:invalid,
     .input input[type='file']:focus:required:invalid,
-    .input input[type='files']:focus:required:invalid,
+    .input input[type='date']:focus:required:invalid,
     .input textarea:focus:required:invalid,
     .input select:focus:required:invalid {
       border-color: #FF1744; }
