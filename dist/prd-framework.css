@@ -515,6 +515,10 @@ section {
       background: none; }
 
 /* Colors */
+@-webkit-keyframes autofill {
+  to {
+    background: transparent; } }
+
 .input {
   display: flex;
   position: relative;
@@ -546,6 +550,9 @@ section {
     border: none;
     font-family: 'Open Sans', sans-serif;
     z-index: 15; }
+    .input input[type='search']:-webkit-autofill, .input input[type='search']:-webkit-autofill:hover, .input input[type='search']:-webkit-autofill:focus, .input input[type='search']:-webkit-autofill:active {
+      -webkit-animation-name: autofill;
+      -webkit-animation-fill-mode: both; }
     .input input[type='search']:hover, .input input[type='search']:focus .input input[type='search']:active {
       box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.3); }
   .input input[type='text'],
@@ -578,6 +585,45 @@ section {
     .input textarea:not(:placeholder-shown),
     .input select:not(:placeholder-shown) {
       margin-top: 16px; }
+    .input input[type='text']:-webkit-autofill, .input input[type='text']:-webkit-autofill:hover, .input input[type='text']:-webkit-autofill:focus, .input input[type='text']:-webkit-autofill:active,
+    .input input[type='email']:-webkit-autofill,
+    .input input[type='email']:-webkit-autofill:hover,
+    .input input[type='email']:-webkit-autofill:focus,
+    .input input[type='email']:-webkit-autofill:active,
+    .input input[type='number']:-webkit-autofill,
+    .input input[type='number']:-webkit-autofill:hover,
+    .input input[type='number']:-webkit-autofill:focus,
+    .input input[type='number']:-webkit-autofill:active,
+    .input input[type='password']:-webkit-autofill,
+    .input input[type='password']:-webkit-autofill:hover,
+    .input input[type='password']:-webkit-autofill:focus,
+    .input input[type='password']:-webkit-autofill:active,
+    .input input[type='phone']:-webkit-autofill,
+    .input input[type='phone']:-webkit-autofill:hover,
+    .input input[type='phone']:-webkit-autofill:focus,
+    .input input[type='phone']:-webkit-autofill:active,
+    .input input[type='tel']:-webkit-autofill,
+    .input input[type='tel']:-webkit-autofill:hover,
+    .input input[type='tel']:-webkit-autofill:focus,
+    .input input[type='tel']:-webkit-autofill:active,
+    .input input[type='file']:-webkit-autofill,
+    .input input[type='file']:-webkit-autofill:hover,
+    .input input[type='file']:-webkit-autofill:focus,
+    .input input[type='file']:-webkit-autofill:active,
+    .input input[type='files']:-webkit-autofill,
+    .input input[type='files']:-webkit-autofill:hover,
+    .input input[type='files']:-webkit-autofill:focus,
+    .input input[type='files']:-webkit-autofill:active,
+    .input textarea:-webkit-autofill,
+    .input textarea:-webkit-autofill:hover,
+    .input textarea:-webkit-autofill:focus,
+    .input textarea:-webkit-autofill:active,
+    .input select:-webkit-autofill,
+    .input select:-webkit-autofill:hover,
+    .input select:-webkit-autofill:focus,
+    .input select:-webkit-autofill:active {
+      -webkit-animation-name: autofill;
+      -webkit-animation-fill-mode: both; }
     .input input[type='text']:focus:required:invalid,
     .input input[type='email']:focus:required:invalid,
     .input input[type='number']:focus:required:invalid,
